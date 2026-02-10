@@ -1,0 +1,11 @@
+public class PerformanceAnalyzer {
+    public static void main(String[] args) {
+        int[] scores = {85, 92, 78, 99, 88};
+        int max = scores[0];
+
+        for (int score : scores) {
+            if (score > max) max = score;
+        }
+        System.out.println("Maximum Performance Score: " + max);
+    }
+}
