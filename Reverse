@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class TransactionReverser {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the transaction number to reverse: ");
+        long transactionId = scanner.nextLong();
+        
+        long reversedId = 0;
+        long temp = transactionId;
+
+        while (temp != 0) {
+            long digit = temp % 10;
+            reversedId = reversedId * 10 + digit;
+            temp /= 10;
+        }
+
+        System.out.println("Original ID: " + transactionId);
+        System.out.println("Processed ID: " + reversedId);
+        scanner.close();
+    }
+}
