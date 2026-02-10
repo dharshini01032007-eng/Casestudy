@@ -1,0 +1,17 @@
+public class RankingSystem {
+    public static void main(String[] args) {
+        int[] data = {12, 45, 2, 8, 33, 5};
+        int smallest = Integer.MAX_VALUE;
+        int secondSmallest = Integer.MAX_VALUE;
+
+        for (int val : data) {
+            if (val < smallest) {
+                secondSmallest = smallest;
+                smallest = val;
+            } else if (val < secondSmallest && val != smallest) {
+                secondSmallest = val;
+            }
+        }
+        System.out.println("Smallest: " + smallest + ", Second Smallest: " + secondSmallest);
+    }
+}
