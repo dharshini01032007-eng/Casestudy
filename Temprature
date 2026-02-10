@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class TemperatureMonitor {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter Temperature in Celsius: ");
+        double celsius = scanner.nextDouble();
+
+        // Formula: (C * 9/5) + 32
+        double fahrenheit = (celsius * 9 / 5) + 32;
+
+        System.out.printf("Current Temperature: %.2f°F\n", fahrenheit);
+
+        if (celsius > 35) {
+            System.out.println("Status: HIGH TEMPERATURE ALERT!");
+        } else if (celsius < 15) {
+            System.out.println("Status: LOW TEMPERATURE ALERT!");
+        } else {
+            System.out.println("Status: NORMAL OPERATING TEMPERATURE.");
+        }
+        scanner.close();
+    }
+}
