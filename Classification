@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class NumberClassifier {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("========================================");
+        System.out.println("   MATHEMATICAL CLASSIFICATION SYSTEM   ");
+        System.out.println("========================================");
+
+        System.out.print("Please enter an integer: ");
+
+        // Check if the input is actually a valid number
+        if (input.hasNextInt()) {
+            int number = input.nextInt();
+
+            // Core Logic
+            if (number % 2 == 0) {
+                System.out.println(">> SUCCESS: " + number + " is an EVEN number.");
+            } else {
+                System.out.println(">> SUCCESS: " + number + " is an ODD number.");
+            }
+        } else {
+            // Error handling for invalid inputs (like text or symbols)
+            System.err.println(">> ERROR: Invalid input. Please enter a whole number.");
+        }
+
+        System.out.println("========================================");
+        input.close();
+    }
+}
