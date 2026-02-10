@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class InventoryFactorial {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number to calculate factorial: ");
+        int n = sc.nextInt();
+        
+        long factorial = 1; // Use long for large numbers
+
+        for (int i = 1; i <= n; i++) {
+            factorial *= i;
+        }
+
+        System.out.println("Inventory Factorial of " + n + " is: " + factorial);
+        sc.close();
+    }
+}
