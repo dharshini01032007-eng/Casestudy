@@ -1,0 +1,20 @@
+public class SortingEngine {
+    public static void main(String[] args) {
+        int[] data = {64, 34, 25, 12, 22, 11, 90};
+        int n = data.length;
+
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (data[j] > data[j + 1]) {
+                    // Manual Swap
+                    int temp = data[j];
+                    data[j] = data[j + 1];
+                    data[j + 1] = temp;
+                }
+            }
+        }
+
+        System.out.print("Sorted Data: ");
+        for (int val : data) System.out.print(val + " ");
+    }
+}
