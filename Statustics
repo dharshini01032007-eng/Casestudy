@@ -1,0 +1,12 @@
+public class StatisticsGenerator {
+    public static void main(String[] args) {
+        double[] values = {10.5, 20.0, 30.5, 40.0};
+        double sum = 0;
+
+        for (double val : values) sum += val;
+        double avg = sum / values.length;
+
+        System.out.println("Sum: " + sum);
+        System.out.println("Average: " + avg);
+    }
+}
