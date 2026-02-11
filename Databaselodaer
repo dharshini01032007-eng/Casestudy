@@ -1,0 +1,21 @@
+class DatabaseLoader extends Thread {
+    public void run() {
+        System.out.println("Loading Database...");
+        try { Thread.sleep(2000); } catch (InterruptedException e) {}
+        System.out.println("Database Loaded.");
+    }
+}
+
+public class DependencySystem {
+    public static void main(String[] args) throws InterruptedException {
+        DatabaseLoader loader = new DatabaseLoader();
+        
+        loader.start();
+        
+        // Ensure 'loader' finishes before Main continues
+        loader.join(); 
+        
+        System.out.println("Starting Application UI...");
+    }
+}
+
