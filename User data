@@ -1,0 +1,13 @@
+class UserData {
+    private String apiKey;
+
+    // Getter
+    public String getApiKey() {
+        return apiKey;
+    }
+
+    // Setter
+    public void setApiKey(String apiKey) {
+        this.apiKey = apiKey;
+    }
+}
