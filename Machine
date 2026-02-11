@@ -1,0 +1,27 @@
+class Machine {
+    void start() { System.out.println("Machine starting..."); }
+}
+
+class Laptop extends Machine {
+    @Override
+    void start() { System.out.println("Laptop booting up BIOS..."); }
+}
+
+class Server extends Machine {
+    @Override
+    void start() { System.out.println("Server initializing cloud services..."); }
+}
+
+public class PolymorphismDemo {
+    public static void main(String[] args) {
+        // Parent reference, Child object
+        Machine myMachine;
+
+        myMachine = new Laptop();
+        myMachine.start(); // Executes Laptop version
+
+        myMachine = new Server();
+        myMachine.start(); // Executes Server version
+    }
+}
+
