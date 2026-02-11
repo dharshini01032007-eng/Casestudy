@@ -1,0 +1,25 @@
+class Worker extends Thread {
+    private String taskName;
+
+    Worker(String name) { this.taskName = name; }
+
+    public void run() {
+        for (int i = 1; i <= 3; i++) {
+            System.out.println(taskName + " is performing step " + i);
+            try { Thread.sleep(500); } catch (InterruptedException e) {}
+        }
+    }
+}
+
+public class ConcurrencyDemo {
+    public static void main(String[] args) {
+        Worker t1 = new Worker("Thread-A");
+        Worker t2 = new Worker("Thread-B");
+        Worker t3 = new Worker("Thread-C");
+
+        t1.start();
+        t2.start();
+        t3.start();
+    }
+}
+
