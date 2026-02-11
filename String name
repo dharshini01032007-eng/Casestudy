@@ -1,0 +1,32 @@
+class User {
+    String name;
+    int id;
+
+    // Default constructor
+    User() {
+        this.name = "Guest";
+        this.id = 0;
+    }
+
+    // Overloaded constructor with one parameter
+    User(String name) {
+        this.name = name;
+        this.id = 101;
+    }
+
+    // Overloaded constructor with two parameters
+    User(String name, int id) {
+        this.name = name;
+        this.id = id;
+    }
+
+    void display() {
+        System.out.println("ID: " + id + ", Name: " + name);
+    }
+
+    public static void main(String[] args) {
+        new User().display();
+        new User("Alice").display();
+        new User("Bob", 505).display();
+    }
+}
