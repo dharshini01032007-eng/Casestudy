@@ -1,0 +1,12 @@
+class BasicSystem {
+    void process() {
+        System.out.println("Processing with standard speed.");
+    }
+}
+
+class EnhancedSystem extends BasicSystem {
+    @Override
+    void process() {
+        System.out.println("Processing with Turbo speed!");
+    }
+}
