@@ -1,0 +1,14 @@
+class LightweightTask implements Runnable {
+    public void run() {
+        System.out.println("Runnable thread active: " + Thread.currentThread().getId());
+    }
+}
+
+public class RunnableDemo {
+    public static void main(String[] args) {
+        LightweightTask task = new LightweightTask();
+        Thread t1 = new Thread(task);
+        t1.start();
+    }
+}
+
