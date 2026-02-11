@@ -1,0 +1,26 @@
+// 44. Custom Exception
+class InvalidAgeException extends Exception {
+    public InvalidAgeException(String message) {
+        super(message);
+    }
+}
+
+public class ValidationSystem {
+    static void checkAge(int age) throws InvalidAgeException {
+        if (age < 18) {
+            // 45. Manual Exception Trigger
+            throw new InvalidAgeException("Access Denied: Must be 18 or older.");
+        } else {
+            System.out.println("Access Granted.");
+        }
+    }
+
+    public static void main(String[] args) {
+        try {
+            checkAge(15);
+        } catch (InvalidAgeException e) {
+            System.out.println("Caught: " + e.getMessage());
+        }
+    }
+}
+
