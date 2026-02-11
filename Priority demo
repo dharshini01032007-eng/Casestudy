@@ -1,0 +1,13 @@
+public class PriorityDemo {
+    public static void main(String[] args) {
+        Thread lowPrio = new Thread(() -> System.out.println("Low priority thread running"));
+        Thread highPrio = new Thread(() -> System.out.println("High priority thread running"));
+
+        lowPrio.setPriority(Thread.MIN_PRIORITY); // 1
+        highPrio.setPriority(Thread.MAX_PRIORITY); // 10
+
+        lowPrio.start();
+        highPrio.start();
+    }
+}
+
