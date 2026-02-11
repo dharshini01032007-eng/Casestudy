@@ -1,0 +1,21 @@
+abstract class Shape {
+    abstract void calculateArea();
+}
+
+class Circle extends Shape {
+    double radius = 5;
+
+    @Override
+    void calculateArea() {
+        System.out.println("Circle Area: " + (3.14 * radius * radius));
+    }
+}
+
+class Square extends Shape {
+    int side = 4;
+
+    @Override
+    void calculateArea() {
+        System.out.println("Square Area: " + (side * side));
+    }
+}
