@@ -1,0 +1,20 @@
+class University {
+    void info() { System.out.println("Academic Institution"); }
+}
+
+class College extends University {
+    void collegeName() { System.out.println("College of Engineering"); }
+}
+
+class Department extends College {
+    void deptName() { System.out.println("Computer Science Department"); }
+}
+
+public class AcademicSystem {
+    public static void main(String[] args) {
+        Department cs = new Department();
+        cs.info();        // From University
+        cs.collegeName(); // From College
+        cs.deptName();    // From Department
+    }
+}
